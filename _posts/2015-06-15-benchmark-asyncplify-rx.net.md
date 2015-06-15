@@ -83,7 +83,7 @@ The asyncplify framework was born.
 ## Code used for the test
 
 ### rx.net code
-{% highlight cs %}
+{% highlight c# %}
 using System;
 using System.Diagnostics;
 using System.Reactive.Linq;
@@ -132,7 +132,7 @@ namespace ConsoleApplication1
         }
     }
 }
-{% endhighlight cs %}
+{% endhighlight c# %}
 
 Used Rx.net version 2.2.5. I have compile this code using visual studio .net 2013 in release mode 
 and start the program without a debugger attached.
