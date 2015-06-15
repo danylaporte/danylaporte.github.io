@@ -36,19 +36,54 @@ The asyncplify framework was born.
 
 ## Results
 ![results]({{ site.url }}/images/asyncplify-rxnet-rxjs.jpg)
-  
-|test|rx.net|rxjs|asyncplify|
-|----|------|----|---------:|
-|sum|1497ms|930ms|19ms|
-|count|1360ms|1024ms|5ms|
-|groupBy/flatMap|1491ms|1538ms|37ms|
-|multiple sum|21ms|961ms|3ms|
 
+## Tables
+
+<div class="row">
+    <div class="large-12 columns">
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>rx.net</th>
+              <th>rxjs</th>
+              <th>asyncplify</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>sum</td>
+              <td>1497ms</td>
+              <td>930ms</td>
+              <td>19ms</td>
+            </tr>
+            <tr>
+              <td>count</td>
+              <td>1360ms</td>
+              <td>1024ms</td>
+              <td>5ms</td>
+            </tr>
+            <tr>
+              <td>groupBy/flatMap</td>
+              <td>1491ms</td>
+              <td>1538ms</td>
+              <td>37ms</td>
+            </tr>
+            <tr>
+              <td>multiple sum/subscribe</td>
+              <td>21ms</td>
+              <td>961ms</td>
+              <td>3ms</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+</div>
 
 ## Code used for the test
 
 ### rx.net code
-```c#
+{% highlight cs %}
 using System;
 using System.Diagnostics;
 using System.Reactive.Linq;
@@ -97,12 +132,13 @@ namespace ConsoleApplication1
         }
     }
 }
-```
+{% endhighlight cs %}
+
 Used Rx.net version 2.2.5. I have compile this code using visual studio .net 2013 in release mode 
 and start the program without a debugger attached.
 
 ### rxjs code
-```js
+{% highlight js %}
 var rx = require('rx').Observable;
 var d = new Date();
 	
@@ -136,12 +172,13 @@ for (var i = 0; i < 1000; i++) {
 }
 
 console.log("multiple sum in %dms", new Date() - d);
-```
+{% endhighlight js %}
+
 used rx version 2.5.3
 
 ### asyncplify code
 
-```js
+{% highlight js %}
 var asyncplify = require('asyncplify');
 var d = new Date();
 
@@ -175,7 +212,8 @@ for (var i = 0; i < 1000; i++) {
 }
 
 console.log("multiple sum in %dms", new Date() - d);
-```
+{% endhighlight js %}
+
 used asyncplify version 0.4.2 
 
 ## Conclusion
