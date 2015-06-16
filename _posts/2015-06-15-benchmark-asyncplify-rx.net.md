@@ -6,6 +6,7 @@ category: performance
 tags: [how-to]
 imagefeature: cover10.jpg
 modified: 2015-06-15
+comments: true
 ---
 
 <section id="table-of-contents" class="toc">
