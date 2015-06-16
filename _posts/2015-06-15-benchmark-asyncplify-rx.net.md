@@ -3,7 +3,7 @@ layout: post
 title: "asyncplify vs rx.net"
 description: "Performance benchmark between asyncplify in nodejs and rx in c#.net"
 category: performance
-tags: [how-to]
+tags: [asyncplify,rx.net,rxjs]
 imagefeature: cover10.jpg
 modified: 2015-06-15
 comments: true
