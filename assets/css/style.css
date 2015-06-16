@@ -161,7 +161,7 @@ main, .notepad-share-icons, .notepad-disqus {
   width: 100%;
   text-align: center;
   background-color: #e51843;
-  background-size: cover;
+  background-size: cover; }
   .notepad-site-head .notepad-site-head-content.with-bg-cover {
     background-color: rgba(0, 0, 0, 0.7); }
   .notepad-site-head .notepad-site-head-content .notepad-site-head-title-bg {
